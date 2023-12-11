@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Article Extractor",
+    "version": "1.0",
+    "description": "Extracts <article> elements and checks for ads, then deletes said ad",
+    "permissions": ["activeTab", "storage"],
+    "content_scripts": [
+      {
+        "matches": ["https://twitter.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
