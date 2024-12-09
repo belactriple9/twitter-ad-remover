@@ -1,12 +1,12 @@
 {
     "manifest_version": 3,
-    "name": "Article Extractor",
+    "name": "Twitter ad remover",
     "version": "1.0",
     "description": "Extracts <article> elements and checks for ads, then deletes said ad",
     "permissions": ["activeTab", "storage"],
     "content_scripts": [
       {
-        "matches": ["https://twitter.com/*"],
+        "matches": ["https://twitter.com/*", "https://x.com/*"],
         "js": ["content.js"],
         "run_at": "document_end"
       }
